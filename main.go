@@ -28,13 +28,13 @@ func main() {
 		// Check if metrics exceed thresholds
 		var notificationMessage string
 		if cpuUsage > config.CPUUsageThreshold {
-			notificationMessage += fmt.Sprintf("⚠️ CPU usage too high: %d%%\n", cpuUsage)
+			notificationMessage += fmt.Sprintf("%v: ⚠️ CPU usage too high: %d%%\n", GetHostname(), cpuUsage)
 		}
 		if memoryUsage > config.MemoryUsageThreshold {
-			notificationMessage += fmt.Sprintf("⚠️ Memory usage too high: %d%%\n", memoryUsage)
+			notificationMessage += fmt.Sprintf("%v: ⚠️ Memory usage too high: %d%%\n", GetHostname(), memoryUsage)
 		}
 		if diskUsage > config.DiskUsageThreshold {
-			notificationMessage += fmt.Sprintf("⚠️ Disk usage too high: %d%%\n", diskUsage)
+			notificationMessage += fmt.Sprintf("%v: ⚠️ Disk usage too high: %d%%\n", GetHostname(), diskUsage)
 		}
 
 		// Send LINE notification if needed
