@@ -2,7 +2,7 @@
 This Golang script collects system metrics from various platforms (Windows, Mac Intel, Mac M1, Linux Ubuntu, CentOS) and logs them into a file. It also integrates with LINE Notify to send alerts when specific thresholds (set in a YAML file) are exceeded. The LINE Notify token is securely stored in a `.env` file.
 
 ## Features
-* Collects system metrics (CPU, memory, disk usage, network activity, etc.).
+* Collects system metrics (CPU, memory, disk usage, etc.).
 * Logs metrics into a designated file.
 * Sends notifications via LINE Notify when metrics exceed set thresholds.
 * Thresholds for each metric are customizable in a `config.yaml` file.
@@ -104,7 +104,6 @@ All system metrics are logged into metrics.log in the root directory. The log co
 * CPU usage.
 * Memory usage.
 * Disk usage.
-* Network activity (optional).
 
 ## Example log entry:
 
