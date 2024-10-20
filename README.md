@@ -115,6 +115,16 @@ All system metrics are logged into metrics.log in the root directory. The log co
 ## Building the Application
 You can build the executable for your system using the following commands:
 
+### Required Programs for Native Go Build
+#### Go Programming Language:
+
+* Download and Install Go:
+    * For Windows: Download the Windows installer from the [official Go website](https://go.dev/doc/install). Run the installer and follow the prompts to complete the installation.
+    * For macOS: Download the macOS installer from the [official Go website](https://go.dev/doc/install). You can also install Go using Homebrew
+    ```
+    $ brew install go
+    ```
+
 ### Build Command
 #### For Windows:
 
