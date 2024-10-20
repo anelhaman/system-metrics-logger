@@ -40,7 +40,7 @@ log_directory: ""          # Log directory (default is current directory)
 Run the script using:
 
 ```
-go run main.go
+go run .
 ```
 The script will log system metrics into `metrics.log` and send LINE notifications if thresholds are exceeded.
 
@@ -50,7 +50,7 @@ The script will log system metrics into `metrics.log` and send LINE notification
 * Linux: Run in any terminal or bash shell.
 
 # Environment Variables
-The following environment variables need to be set in the .env file:
+The following environment variables need to be set in the `.env` file:
 
 
 | Variable | Description|
@@ -94,7 +94,7 @@ To enable LINE notifications, you need to generate a LINE Notify token:
 
 1. Visit LINE Notify.
 2. Log in and generate a personal access token.
-3. Store this token in the .env file as described above.
+3. Store this token in the `.env` file as described above.
 Whenever a metric exceeds its threshold, a notification will be sent to your LINE app with details about the exceeded metric.
 
 ## Logging
