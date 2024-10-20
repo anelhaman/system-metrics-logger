@@ -1,0 +1,4 @@
+cpu_usage_threshold: 10    # CPU usage threshold in percentage
+memory_usage_threshold: 15 # Memory usage threshold in percentage
+disk_usage_threshold: 10   # Disk usage threshold in percentage
+interval_seconds: 5        # Interval for checking metrics, default 5 seconds
