@@ -33,6 +33,7 @@ LINE_NOTIFY_TOKEN=your-line-notify-token
 cpu_usage_threshold: 80    # Threshold for CPU usage (in percentage)
 memory_usage_threshold: 70 # Threshold for memory usage (in percentage)
 disk_usage_threshold: 90   # Threshold for disk usage (in percentage)
+log_directory: ""          # Log directory (default is current directory)
 ```
 
 ## Usage
