@@ -42,7 +42,7 @@ Run the script using:
 ```
 go run .
 ```
-The script will log system metrics into `metrics.log` and send LINE notifications if thresholds are exceeded.
+The script will log system metrics into log file and send LINE notifications if thresholds are exceeded.
 
 ## Example of running on different systems:
 * Windows: Run the above command in a PowerShell or CMD.
@@ -98,7 +98,7 @@ To enable LINE notifications, you need to generate a LINE Notify token:
 Whenever a metric exceeds its threshold, a notification will be sent to your LINE app with details about the exceeded metric.
 
 ## Logging
-All system metrics are logged into metrics.log in the root directory. The log contains information like:
+All system metrics are logged into log file in the root directory. The log contains information like:
 
 * Timestamp of the log entry.
 * CPU usage.
