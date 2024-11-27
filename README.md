@@ -34,6 +34,7 @@ cpu_usage_threshold: 80    # Threshold for CPU usage (in percentage)
 memory_usage_threshold: 70 # Threshold for memory usage (in percentage)
 disk_usage_threshold: 90   # Threshold for disk usage (in percentage)
 log_directory: ""          # Log directory (default is current directory)
+google_sheet_id: ""        # Google Sheet ID (get from URL of sheet) don't forget to share sheet edit with this link
 ```
 
 ## Usage
@@ -57,6 +58,15 @@ The following environment variables need to be set in the `.env` file:
 | ------------- |:-------------:|
 | LINE_NOTIFY_TOKEN | Your LINE Notify token for sending alerts.
 
+## Steps to Implement Google Sheets Integration
+### Enable the Google Sheets API:
+
+1. Go to the Google Cloud Console.
+2. Create a new project (or select an existing one).
+3. Enable the Google Sheets API for your project.
+4. Create credentials (OAuth 2.0 client ID or a service account) and download the credentials JSON file.
+
+Replace `credentials.json` with the path to your credentials file.
 
 ## Configuration
 The script uses a config.yaml file to specify metric thresholds. You can adjust these thresholds according to your system's needs.

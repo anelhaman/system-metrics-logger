@@ -42,7 +42,7 @@ func main() {
 			err := sendLineNotification(notificationMessage)
 			if err != nil {
 				// Log the error to the log file
-				logError(err.Error(), config.LogDirectory) // Log the error to the log file
+				logError(err.Error(), config.LogDirectory)
 				log.Printf("Failed to send LINE notification: %v", err)
 			} else {
 				fmt.Println("Notification sent successfully.")
@@ -51,7 +51,23 @@ func main() {
 			fmt.Println("Metrics are within thresholds, no notification sent.")
 		}
 
+		// Prepare data to write to Google Sheets
+		timestamp := time.Now().Format("2006-01-02 15:04:05") // Use a readable timestamp format
+		sheetData := [][]interface{}{
+			{timestamp, cpuUsage, memoryUsage, diskUsage},
+		}
+
+		// Write to Google Sheets
+		err := writeToGoogleSheet(config.GoogleSheetID, sheetData) // Replace with your sheet ID and range
+		if err != nil {
+			logError(err.Error(), config.LogDirectory)
+			log.Printf("Failed to write metrics to Google Sheets: %v", err)
+		} else {
+			fmt.Println("Metrics logged to Google Sheets successfully.")
+		}
+
 		// Sleep for the configured interval
 		time.Sleep(time.Duration(config.IntervalSeconds) * time.Second)
 	}
+
 }

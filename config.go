@@ -13,12 +13,13 @@ type Config struct {
 	DiskUsageThreshold   int    `yaml:"disk_usage_threshold"`
 	IntervalSeconds      int    `yaml:"interval_seconds"` // New field for the interval
 	LogDirectory         string `yaml:"log_directory"`    // New field for log directory
+	GoogleSheetID        string `yaml:"google_sheet_id"`
 }
 
 // LoadConfig loads the thresholds and interval from the config.yaml file
 func LoadConfig() (*Config, error) {
 	config := &Config{}
-	data, err := os.ReadFile("config.yaml") // Use os.ReadFile instead of ioutil.ReadFile
+	data, err := os.ReadFile("config.yaml")
 	if err != nil {
 		return nil, err
 	}
